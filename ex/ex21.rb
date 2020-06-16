@@ -1,37 +1,37 @@
-def add(a, b)
-	puts "ADDING #{a} + #{b}"
+def cong(a, b)
+	puts "CỘNG #{a} + #{b}"
 	return a + b
 end
 
-def subtract(a, b)
-	puts "SUBTRACTING #{a} - #{b}"
+def tru(a, b)
+	puts "TRỪ #{a} - #{b}"
 	return a - b
 end
 
-def multiply(a, b)
-	puts "MULTIPLY #{a} * #{b}"
+def nhan(a, b)
+	puts "NHÂN #{a} * #{b}"
 	return a * b
 end
 
-def divide(a, b)
-	puts "DIVIDING #{a} / #{b}"
+def chia(a, b)
+	puts "CHIA #{a} / #{b}"
 	return a / b
 end
 
-puts "Let's do some math with just functions!"
+puts "Làm tý phép tính cho vui"
 
-age = add(30, 5)
-height = subtract(78, 4)
-weight = multiply(90, 2)
-iq = divide(100, 2)
+tuoi = cong(30, 5)
+chieucao = tru(78, 4)
+cannang = nhan(90, 2)
+iq = chia(100, 2)
 
-puts "Age: #{age}, Height: #{height}, Weight: #{weight}, IQ: #{iq}"
+puts "Tuổi: #{tuoi}, Chiều Cao: #{chieucao}, Cân nặng: #{cannang}, IQ: #{iq}"
 
 # A puzzle for the extra credit, type it in anyway
-puts "Here is a puzzle."
+puts "Tính phép tính"
 
-what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+what = cong(tuoi, tru(chieucao, nhan(cannang, chia(iq, 2))))
 
 
-puts "That becomes: #{what}. Can you do it by hand?"
+puts "Kết quả sau khi làm phép #{what}."
 

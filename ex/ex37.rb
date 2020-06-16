@@ -1,0 +1,1 @@
+(0..5).each {|i| retry if i > 2}
