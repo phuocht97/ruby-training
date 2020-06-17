@@ -221,7 +221,11 @@ end
 	end
 
 class Map
-	@@cac_man = {
+	attr_accessor :cac_man
+
+	def initialize(man_bat_dau)
+		@man_bat_dau = man_bat_dau
+		@cac_man = {
 		'man_lua_chon' => ManLuaChon.new(),
 		'class_nong_dan' => ClassNongDan.new(),
 		'nong_dan_dau_den' => TrongDauDen.new(),
@@ -232,12 +236,11 @@ class Map
 		'chet' => Death.new(),
 		'finished' => Finished.new()
 	}
-	def initialize(man_bat_dau)
-		@man_bat_dau = man_bat_dau
+
 	end
 
 	def man_ke_tiep(ten_man)
-		giatri = @@cac_man[ten_man]
+		giatri = cac_man[ten_man]
 		return giatri
 	end
 

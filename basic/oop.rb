@@ -20,13 +20,14 @@ class Some
 	end
 
 
-	def initialize()
-		@randomFruit = "And now a thousand years between"
+	def initialize
+		@randomFruit = "and now a thousand years between"
 	end
 
-	attr_reader :randomFruit
-	def orange()
-		puts "I'm Classy Oranges"
+	attr_reader :Fruit
+	def orange
+		@Fruit = @randomFruit
+		puts "I'm Classy Oranges #{@Fruit}"
 	end
 end
 
@@ -35,7 +36,12 @@ class Book
 end
 
 b1 = Book.new
+MyStuff.hello
 b1.title = "Hidden motives"
 b1.pages = 225
 p "The book #{b1.title} has #{b1.pages} pages"
-
+puts '-' *40
+b2 = Some.new
+b2.test_say
+Some.say
+b2.orange

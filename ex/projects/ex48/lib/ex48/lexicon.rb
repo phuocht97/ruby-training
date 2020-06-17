@@ -1,4 +1,4 @@
-class Room
+class Lexicon
 
   def initialize(name, description)
     @name = name
