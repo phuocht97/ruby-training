@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appvenjob</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<ul class="home-zoos">
+		<li><%= link_to "Home Zoos", zoos_path %></li>
+	</ul>
+	<ul class="home-emails">
+		<li><%= link_to "Home Emails", emails_path %></li>
+	</ul>
+<%= yield %>
+
+</body>
+</html>

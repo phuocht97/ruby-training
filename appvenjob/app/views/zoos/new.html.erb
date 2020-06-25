@@ -1,0 +1,15 @@
+<%= form_for :zoo, url: zoos_path do |form| %>
+	<p>
+		<%= form.label :name%>:<br>
+		<%= form.text_field :name%>
+	</p>
+	
+	<p>
+		<%= form.label :lbs%>:<br>
+		<%= form.text_field :lbs%>
+	</p>
+
+	<p>
+		<%= form.submit%>
+	</p>
+<%end%>

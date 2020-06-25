@@ -76,8 +76,10 @@ class CallMethodPrivate
 end
 
 new_call = CallMethodPrivate.new
+puts "Method 1"
 new_call.method_pri1
 #new_call.method_pri2 #error do có self
+puts "Method 3"
 new_call.method_pri3
 puts '-' *40
 #class Protected
@@ -90,7 +92,6 @@ class UserProtect
 end
 
 class User1Protect
-	
 
 	def call_by_self
 		self.secret
@@ -132,22 +133,13 @@ u1_pro = User1Protect.new
 #u1_pro.secret # Protected nên ko gọi dc
 u1_pro.call_by_self
 u1_pro.call_not_self
-
 john = UserInitPro.new("John")
 bob = UserInitPro.new("Bob")
 puts bob == john
 puts '-' *40
 
-class TestAttr
-	attr_accessor :bien
-	def initialize(words)
-		@bien = words
-	end
 
-	def Output
-		puts @bien
-	end
-end
 
-c = TestAttr.new("aaa")
-puts c.Output
+
+
+

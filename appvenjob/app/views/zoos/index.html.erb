@@ -1,0 +1,9 @@
+
+<ul class="new-animal-right">
+	<li><%= link_to "New Animail", new_zoo_path %></li>
+</ul>
+<h1>All Zoos</h1>
+<%= @zoos.each do |zoo| %>
+	<h3><%= zoo.name %></h3>
+	<p><%= zoo.lbs %></p>
+<% end %>
