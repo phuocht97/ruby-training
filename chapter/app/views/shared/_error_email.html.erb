@@ -1,0 +1,9 @@
+<% if @user.errors.any? %>
+	<div id="error_explanation">
+		<ul>
+			<% @user.errors[:email].each do |value| %>
+					<li>❖Email <%= value %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apphospital</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	 <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "List Patient", hospitals_path , id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Add Patient", new_hospital_path %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+<div class="container">
+	<%= yield %>
+</div>	
+
+</body>
+</html>

@@ -1,21 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-  get 'static_pages/home'
-
-  get 'static_pages/help'
-
-  get 'static_pages/application'
-
-  resources :emails
-  resources :zoos
-
-  #get 'zoos/new', to:'zoos#new' as: 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  resources :hospitals
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

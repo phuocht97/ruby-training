@@ -2,18 +2,29 @@
 <html>
 <head>
   <title>Appvenjob</title>
+  <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<ul class="home-zoos">
-		<li><%= link_to "Home Zoos", zoos_path %></li>
-	</ul>
-	<ul class="home-emails">
-		<li><%= link_to "Home Emails", emails_path %></li>
-	</ul>
-<%= yield %>
+	<nav class="navbar navbar-default">
+		<div id="navbar" class="collapse navbar-collapse">
+			
+		</div>
+		<ul class="nav navbar-nav">
+			<li><%= link_to "Home Zoos", zoos_path %></li>
+		</ul>
+		<ul class="nav navbar-nav">
+			<li><%= link_to "Home Emails", emails_path %></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><%= link_to "New Animail", new_zoo_path %></li>
+		</ul>
+	</nav>
+<div class="container">
+	<%= yield %>
+</div>
 
 </body>
 </html>

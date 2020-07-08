@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  # resources :microposts
+  resources :users do
+    member do
+      get :following, :followers
+    end 
+  end
 
-  get 'static_pages/home'
+  resources :sessions,      only: [:new, :create, :destroy]
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
-  get 'static_pages/help'
+  root  'static_pages#home'
 
-  get 'static_pages/application'
+  match '/help',    to: 'static_pages#help',    via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
 
-  resources :emails
-  resources :zoos
-
-  #get 'zoos/new', to:'zoos#new' as: 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

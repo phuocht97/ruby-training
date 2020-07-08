@@ -1,0 +1,8 @@
+<h1>All Patients</h1>
+<% @hospital.each do |hospital| %>
+	<div class="well">
+		<h3><%= hospital.name%></h3>
+		<p><%= hospital.age%></p>
+		<%= link_to "Read more" , hospital_path(hospital), class: "btn btn-success dropdown-toggle" %>
+	</div>
+<% end %>

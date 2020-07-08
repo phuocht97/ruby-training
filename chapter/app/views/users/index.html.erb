@@ -1,0 +1,15 @@
+<% provide(:title, 'All users') %>
+	<div id="flash-success-signin">
+		<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %>
+	</div>
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+<%= render @users %>
+</ul>
+
+<%= will_paginate %>

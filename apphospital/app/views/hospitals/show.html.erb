@@ -1,0 +1,8 @@
+<h3><%= @hospital.name %></h3>
+<p><%= @hospital.age %></p><br>
+<%= link_to "Edit", edit_hospital_path(@hospital), class: "btn btn-success dropdown-toggle" %>
+<%= link_to "Delete", hospital_path(@hospital), 
+		method: :delete,
+		data:{confirm: 'You want to delete?'},
+			class: "btn btn-danger dropdown-toggle" %>
+<%= link_to "Back", hospitals_path , class: "btn btn-warning dropdown-toggle" %>
